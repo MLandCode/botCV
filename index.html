@@ -3,21 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Página</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin: 0;
-            padding: 0;
-        }
-        h1 {
-            color: #333;
-        }
-    </style>
+    <title>Análisis de CV</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>¡Bienvenido a mi página!</h1>
-    <p>Esta es una prueba para verificar que todo funciona correctamente.</p>
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="container">
+            <h1>Optimiza tu CV con nuestro análisis inteligente</h1>
+            <p>Descubre cómo mejorar tu currículum y aumenta tus posibilidades de conseguir el empleo que deseas.</p>
+            <a href="#analysis-section" class="cta-button">Comenzar ahora</a>
+        </div>
+    </header>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2>¿Por qué elegirnos?</h2>
+            <div class="feature-list">
+                <div class="feature-item">
+                    <h3>Análisis detallado</h3>
+                    <p>Recibe un informe completo sobre la compatibilidad de tu CV con el empleo deseado.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Recomendaciones personalizadas</h3>
+                    <p>Obtén sugerencias específicas para mejorar tu CV.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Pago seguro</h3>
+                    <p>Procesamos tus pagos de forma segura con PayPal.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Analysis Section -->
+    <section id="analysis-section" class="analysis-section">
+        <div class="container">
+            <h2>Análisis de CV</h2>
+            <form id="cv-form">
+                <label for="cv-upload">Sube tu CV en PDF:</label>
+                <input type="file" id="cv-upload" accept=".pdf" required>
+
+                <label for="job-description">Descripción del empleo:</label>
+                <textarea id="job-description" placeholder="Ingresa la descripción del empleo..." required></textarea>
+
+                <button type="submit">Analizar CV</button>
+            </form>
+
+            <div id="basic-analysis" class="analysis"></div>
+            <div id="premium-analysis" class="analysis hidden">
+                <h3>Análisis Premium</h3>
+                <p id="premium-content"></p>
+            </div>
+
+            <button id="pay-button" class="hidden">Desbloquear análisis premium ($10)</button>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
 </body>
 </html>
